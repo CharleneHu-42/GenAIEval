@@ -195,7 +195,7 @@ def run_locust_test(kubeconfig, global_settings, run_settings, output_folder, in
                 else processes
     elif load_shape == "poisson":
         if load_shape_params and "arrival-rate" in load_shape_params:
-            processes = max(2, math.ceil(int(load_shape_params["arrival-rate"]) / 10))
+            processes = max(2, math.ceil(int(load_shape_params["arrival-rate"]) / 5))
 
     cmd = [
         "locust",
